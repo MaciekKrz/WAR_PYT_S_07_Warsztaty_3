@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Start Page</title>
+</head>
+    <body>
+        <h1>Szczegóły sali:</h1><br>
+        <ul>
+            <li><h3>{{ rooms.name }}</h3></li>
+            <li>Dostępnych siedzień: {{ rooms.seats }}</li>
+            <li>Projektor: {{ rooms.projector }}</li>
+             <li>Zarezerwowana w dniach:<br> {{rooms.reservation_set.all}}</li>
+            <a href="/room/reservation/{{rooms.id}}">
+                <button>Zarezerwuj:</button>
+            </a><br>
+            <a href="/room/modify/{{rooms.id}}/">
+                <button>Edytuj:</button>
+            </a>
+            <a href="/room/delete/{{rooms.id}}">
+                <button>Usuń:</button>
+            </a>
+        </ul>
+    </body>
+</html>

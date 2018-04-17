@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Reserve Room</title>
+</head>
+    <body>
+        {% csrf_token %}
+        <h2>Zarezerwuj salę:</h2><br>
+        {% csrf_token %}
+        <form action="#" method="POST">
+            <label> Nazwa sali:
+                <h4>{{ rooms.name }}</h4>
+            </label><br>
+            <label> Data:
+                <input type=date name="reserve_date">
+            </label><br>
+            <label> Komentarz:
+                <input type=text name="reserve_comment">
+            </label><br>
+                <input type="submit" name="reserve_room" value="Zarezerwuj">
+        </form>
+     <!--<script type="text/javascript">-->
+       <!--alert("This is an alert box!");-->
+     <!--</script>-->
+    </body>
+</html>
+
+<!--if (myNum1 < myNum2) {-->
+   <!--alert("JavaScript is easy to learn.");-->
+<!--}-->

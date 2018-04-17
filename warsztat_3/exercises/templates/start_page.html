@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Start Page</title>
+</head>
+    <body>
+        <a href="/room/search/">
+            <button>Szukaj sali:</button>
+        </a><br>
+        <a href="/room/new/">
+            <button>Dodaj sale:</button>
+        </a>
+        <h1>Dostępne sale:</h1>
+        {% for room in rooms %}
+        <ul>
+            <li><h3> <a href="/room/{{room.id}}">{{ room.name }}</a></h3></li>
+                <ul>
+                    <li> {{room.reservation_set.all}}</li>
+                </ul>
+            <a href="/room/modify/{{room.id}}">
+                    <button>Edit:</button>
+            </a>
+            <a href="/room/delete/{{rooms.id}}">
+                    <button>Usuń:</button>
+            </a>
+        </ul>
+        {% endfor %}
+    </body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>New Room</title>
+</head>
+    <body>
+        <h2>Usuń salę:</h2><br>
+        {% csrf_token %}
+        <form action="#" method="POST">
+            <label> Nazwa sali:
+                <input type=text name="name" value="{{rooms.name}}">
+            </label><br>
+            <label> Ilość miejsc:
+                <input type=text name="seats" value="{{rooms.seats}}">
+            </label><br>
+            <label> Projektor:
+                <input type=checkbox name="projector">
+            </label><br>
+            <!--<a href="/start_page/">-->
+                <input type="submit" name="add_room" value="Usuń">
+            <!--</a><br>-->
+        </form>
+    </body>
+</html>
